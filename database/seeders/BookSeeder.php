@@ -18,7 +18,7 @@ class BookSeeder extends Seeder
         $authors = \App\Models\Author::pluck('id')->toArray();
 
 
-        for ($index = 1; $index <= 20; $index++) {
+        for ($index = 1; $index <= 100000; $index++) {
             \App\Models\Book::create([
                 'book_name' => $faker->sentence(3),
 //                'author_id' => $faker->randomElement($authors),

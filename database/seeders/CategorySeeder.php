@@ -15,17 +15,11 @@ class CategorySeeder extends Seeder
     {
         $faker = Faker::create();
 
-        Category::create([
-            'name' => 'Fiction',
-        ]);
-
-        Category::create([
-            'name' => 'Non-Fiction',
-        ]);
-
-        Category::create([
-            'name' => 'Science Fiction',
-        ]);
+        for ($i = 0; $i < 1000; $i++) {
+            Category::create([
+                'name' => $faker->name,
+            ]);
+        }
 
        
     }
